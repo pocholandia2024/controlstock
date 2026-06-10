@@ -1,0 +1,3 @@
+# Sin dependencias en tiempo de ejecución (Python 3.10+)
+# Para compilar la app de macOS:
+# pip install -e ".[build-mac]"

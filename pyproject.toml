@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "controlstock"
+version = "1.1.0"
+description = "Control de inventario para tienda de tecnología"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "ControlStock" }]
+dependencies = []
+
+[project.optional-dependencies]
+build-mac = ["py2app>=0.28"]
+
+[project.scripts]
+controlstock = "main:main"
+controlstock-cli = "controlstock.cli:main_cli"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["controlstock*"]
+
+[tool.setuptools]
+py-modules = ["main"]
